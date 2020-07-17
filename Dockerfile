@@ -83,7 +83,7 @@ RUN yes | sdkmanager "platform-tools" "platforms;android-24" "tools" "emulator"
 # The `yes` is for accepting all non-standard tool licenses.
 RUN yes | sdkmanager --update --channel=3
 RUN yes | sdkmanager \
-    "ndk;21.3.6528147" \
+    "ndk-bundle" \
     "system-images;android-24;default;x86_64"
 
 # Linters
