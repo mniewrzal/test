@@ -23,8 +23,8 @@ RUN echo 'max_connections = 1000' >> /etc/postgresql/12/main/conf.d/connectionli
 
 # Tooling
 
-COPY ./scripts/install-awscli.sh /tmp/install-awscli.sh
-RUN bash /tmp/install-awscli.sh
+# COPY ./scripts/install-awscli.sh /tmp/install-awscli.sh
+# RUN bash /tmp/install-awscli.sh
 ENV PATH "$PATH:/root/bin"
 
 RUN curl -L https://github.com/protocolbuffers/protobuf/releases/download/v3.12.3/protoc-3.12.3-linux-x86_64.zip -o /tmp/protoc.zip && unzip /tmp/protoc.zip -d "$HOME"/protoc
